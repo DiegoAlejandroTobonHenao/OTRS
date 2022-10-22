@@ -1,0 +1,6 @@
+com\packtpub\mmj\restaurant\resources\docker\DockerIT.class
+com\packtpub\mmj\restaurant\resources\RestaurantControllerTests.class
+com\packtpub\mmj\restaurant\resources\RestaurantControllerTests$TestRestaurantRepository.class
+com\packtpub\mmj\restaurant\resources\docker\RestaurantAppDockerIT.class
+com\packtpub\mmj\restaurant\resources\AbstractRestaurantControllerTests.class
+com\packtpub\mmj\restaurant\resources\RestaurantControllerIntegrationTests.class

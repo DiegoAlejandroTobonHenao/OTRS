@@ -1,0 +1,3 @@
+com\packtpub\mmj\booking\resources\BookingControllerIntegrationTests.class
+com\packtpub\mmj\booking\resources\docker\DockerIT.class
+com\packtpub\mmj\booking\resources\docker\BookingAppDockerIT.class

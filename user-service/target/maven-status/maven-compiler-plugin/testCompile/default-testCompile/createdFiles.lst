@@ -1,0 +1,3 @@
+com\packtpub\mmj\user\resources\docker\DockerIT.class
+com\packtpub\mmj\user\resources\docker\UserAppDockerIT.class
+com\packtpub\mmj\user\resources\UserControllerIntegrationTests.class
