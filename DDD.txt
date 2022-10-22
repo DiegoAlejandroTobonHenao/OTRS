@@ -1,0 +1,28 @@
+Usaremos la implementación y el enfoque basados ​​en dominios que describimos en el último capítulo para implementar los microservicios usando Spring Cloud. Repasemos los artefactos clave:
+
+Entidades : estas son categorías de objetos que son identificables y
+permanecen iguales a lo largo de los estados del producto/servicio. 
+Estos objetos no se definen por sus atributos, sino por sus identidades e
+hilos de continuidad. Las entidades tienen rasgos como identidad,
+un hilo de continuidad y atributos que no definen su identidad.
+
+Objetos de valor ( VO ): estos solo tienen los atributos y no tienen identidad 
+conceptual. Una mejor práctica es mantener los VO como objetos inmutables. 
+En Spring Framework, las entidades son POJO puros; por lo tanto, también los 
+usaremos como VO.
+
+Objetos de servicio : Estos son comunes en marcos técnicos. Estos también se utilizan
+en la capa de dominio en DDD. Un objeto de servicio no tiene un estado interno; 
+el único propósito de esto es proporcionar el comportamiento al dominio. 
+Los objetos de servicio proporcionan comportamientos que no se pueden relacionar 
+con entidades específicas o VO. Los objetos de servicio pueden proporcionar uno o 
+más comportamientos relacionados a una o más entidades o VO. Es una buena práctica 
+definir los servicios explícitamente en el modelo de dominio.
+
+
+Objetos de repositorio : un objeto de repositorio es una parte del modelo de dominio 
+que interactúa con el almacenamiento, como bases de datos, 
+fuentes externas, etc., para recuperar los objetos persistentes. 
+Cuando el repositorio recibe una solicitud de una referencia de objeto, 
+devuelve la referencia de objeto existente. Si el objeto solicitado no 
+existe en el repositorio, recupera el objeto del almacenamiento.

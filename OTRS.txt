@@ -1,0 +1,31 @@
+Descripción general de OTRS
+Según los principios de los microservicios, necesitamos tener microservicios
+ separados para cada funcionalidad. Después de analizar OTRS,
+podemos dividirlo fácilmente en tres microservicios principales:
+el servicio de restaurante, el servicio de reserva 
+y el servicio de usuario. Hay otros microservicios 
+que se pueden definir en OTRS, pero nuestro enfoque está en estos 
+tres microservicios. La idea es hacerlos independientes, incluso tener sus propias
+bases de datos separadas.
+
+Podemos resumir las funcionalidades de estos servicios de la siguiente manera:
+
+Servicio de restaurante : este servicio proporciona la funcionalidad 
+                        para el recurso del restaurante : operaciones de creación , lectura , actualización , eliminación ( CRUD ) y búsqueda. Proporciona la asociación entre restaurantes y mesas. Este servicio también proporciona acceso a la Tableentidad.
+Servicio de usuario : este servicio, como su nombre indica, permite al usuario 
+                        final realizar operaciones CRUD en entidades de usuario.
+Servicio de reservas : Hace uso del servicio de restaurante y 
+                        del servicio de atención al usuario para realizar operaciones CRUD sobre las reservas. Utilizará la búsqueda de restaurantes y su búsqueda y asignación de mesas asociadas en función de la disponibilidad de mesas durante un período de tiempo específico. Crea una relación entre el restaurante/mesa y el usuario:
+
+Registro y descubrimiento de los diferentes microservicios
+El diagrama anterior muestra cómo funciona cada microservicio de forma independiente.
+Esta es la razón por la que los microservicios se pueden desarrollar, 
+mejorar y mantener por separado, sin afectar a los demás. 
+Cada uno de estos servicios puede tener su propia arquitectura y
+base de datos en capas. 
+No hay restricción para usar las mismas tecnologías, marcos y 
+lenguajes para desarrollar estos servicios. 
+En cualquier momento dado, también puede introducir nuevos microservicios. Por ejemplo, con fines contables, podemos introducir un servicio de contabilidad que se puede exponer a los restaurantes para la contabilidad. Del mismo modo, los análisis y los informes son otros servicios que se pueden integrar y exponer.
+
+Para fines de demostración, solo implementaremos los tres servicios
+ que se muestran en el diagrama anterior.
